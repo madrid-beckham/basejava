@@ -6,9 +6,8 @@
 ### Подготовка рабочего окружения
 - Установите [JDK8](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html) (выбрать Accept License Agreement)
 - Установите систему управления версиями [Git](http://git-scm.com/downloads) (опции по умолчанию)
-- Создайте аккаунт на [GitHub](https://github.com/)
-- Для удобной навигации по файлам на GitHub установите расширение для браузера - [Octotree](https://habrahabr.ru/post/223527/)
-- Установите [IntelliJ IDEA Ultimate](http://www.jetbrains.com/idea/download/index.html) (30 дней пробного бесплатного использования.  Каждый участник проектов получает единоразовый личный купон на бесплатную версию Ultimate на 6 месяцев). **Пока нет базы данных и веб, можно работать с версией community**.
+- Создайте аккаунт на [GitHub](https://github.com/). Для удобной навигации по файлам на GitHub можно установить расширение для браузера [Octotree](https://habrahabr.ru/post/223527/)
+- Установите [IntelliJ IDEA](http://www.jetbrains.com/idea/download/index.html). **Пока нет базы данных и веб, можно работать с версией Community**. На версию Ultimate дается 30 дней пробного бесплатного использования (trial).  На проектах каждый участник проектов получает единоразовый личный купон на бесплатную версию Ultimate на 6 месяцев.
 
 ## ![video](https://cloud.githubusercontent.com/assets/13649199/13672715/06dbc6ce-e6e7-11e5-81a9-04fbddb9e488.png) 1. [Разработка ПО](https://drive.google.com/open?id=0B_4NpoQW1xfpVjZUTEpvVUN1TTA)
 - [Мифический человеко-месяц](https://ru.wikipedia.org/wiki/Мифический_человеко-месяц) (wiki)
