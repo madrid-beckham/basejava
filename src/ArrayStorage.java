@@ -7,22 +7,21 @@ import static java.util.Arrays.copyOf;
  */
 public class ArrayStorage {
     Resume[] storage = new Resume[10000];
-    int size ;
+
 
     void clear() {
-        Arrays.fill(storage, 0, size, null);
+        Arrays.fill(storage, 0, size(), null);
     }
 
     void save(Resume r) {
-        for (int i = 0; i < size; i++) {
+        for (int i = 0; i < storage.length; i++) {
             storage[i] = r;
         }
-
     }
 
     Resume get(String uuid) {
 
-        for (int i = 0; i < size; i++) {
+        for (int i = 0; i < size(); i++) {
 
             if (storage[i].uuid.equals(uuid)) {
                 return storage[i];
@@ -31,15 +30,21 @@ public class ArrayStorage {
         }
         return null; // т.е. значит резюме нет
     }
+    //int k = 0;
+    //   for (int i = 0; i < size; i++) {
+
+    //    if (storage[i].uuid.equals(uuid)) {
+    //         k = k + 1;
+    //     }
+    //  }
+    //   return storage[k];
+    //  }
 
     void delete(String uuid) {
-        for (int i = 0; i < size; i++) {
-            if (storage[i].uuid.equals(uuid)) {
-                System.out.println("Ничего не зануляем");
-            } else {
+        for (int i = 0; i < size(); i++) {
+            if (storage[i].uuid!=(uuid)) {
                 storage[i].uuid = null;
             }
-
 
         }
 
@@ -50,21 +55,17 @@ public class ArrayStorage {
      */
     Resume[] getAll() {
 
-        return copyOf(storage, storage.length);
-
+        return Arrays.copyOf(storage, size());
 
     }
 
     int size() {
-
+        int size = 0;
         for (int i = 0; i < storage.length; i++) {
-            if (storage[i].equals(null)) {
-                System.out.println("null");
 
-            } else {
+            if (storage[i] != null) {
                 size++;
             }
-
         }
         return size;
 
