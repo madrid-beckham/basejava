@@ -1,27 +1,28 @@
 import java.util.Arrays;
 
 import static java.util.Arrays.copyOf;
-import static java.util.Arrays.stream;
 
 /**
  * Array based storage for Resumes
  */
 public class ArrayStorage {
     Resume[] storage = new Resume[10000];
+    int size ;
 
     void clear() {
-        Arrays.fill(storage, null);
+        Arrays.fill(storage, 0, size, null);
     }
 
     void save(Resume r) {
-        for (int i = 0; i < storage.length; i++)
+        for (int i = 0; i < size; i++) {
             storage[i] = r;
+        }
 
     }
 
     Resume get(String uuid) {
 
-        for (int i = 0; i < storage.length; i++) {
+        for (int i = 0; i < size; i++) {
 
             if (storage[i].uuid.equals(uuid)) {
                 return storage[i];
@@ -32,12 +33,14 @@ public class ArrayStorage {
     }
 
     void delete(String uuid) {
-        for (int i = 0; i < storage.length; i++) {
+        for (int i = 0; i < size; i++) {
             if (storage[i].uuid.equals(uuid)) {
-
+                System.out.println("Ничего не зануляем");
             } else {
                 storage[i].uuid = null;
             }
+
+
         }
 
     }
@@ -53,17 +56,17 @@ public class ArrayStorage {
     }
 
     int size() {
-        int count = 0;
+
         for (int i = 0; i < storage.length; i++) {
             if (storage[i].equals(null)) {
                 System.out.println("null");
 
             } else {
-                count++;
+                size++;
             }
 
         }
-        return count;
+        return size;
 
     }
 }
